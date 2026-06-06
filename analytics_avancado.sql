@@ -12,7 +12,7 @@ CREATE TABLE clientes (
     status_cliente VARCHAR(20) DEFAULT 'Ativo' -- Essencial para análise de Churn
 );
 
-CREATE TABLE transportes (
+CREATE TABLE transportadoras (
     id_transportadora INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     status_transportadora VARCHAR(20) DEFAULT 'Ativo'
@@ -48,7 +48,7 @@ INSERT INTO clientes (nome, email, idade, status_cliente) VALUES
 ('Mariana Almeida', 'mariana@email.com', 23, 'Ativo'), ('Gabriel Pires', 'gabriel@email.com', 31, 'Ativo'),
 ('Lucas Martins', 'lucas@email.com', 17, 'Ativo'), ('Camila Rocha', 'camila@email.com', 48, 'Ativo');
 
-INSERT INTO transportes (nome, status_transportadora) VALUES  
+INSERT INTO transportadoras (nome, status_transportadora) VALUES  
 ('LogExpress', 'Ativo'), ('Alfafretes', 'Ativo'), ('VeloCargo', 'Ativo');
 
 INSERT INTO pedidos (id_clientes, status_pedido, valor_total, data_pedido) VALUES  
@@ -157,7 +157,7 @@ SELECT
     t.nome,
     ROUND (AVG(e.data_entrega_efetiva - e.data_envio), 1) AS prazo_medio_dias
     FROM entregas e
-    JOIN transportes t ON t.id_transportadora = e.id_transportadora
+    JOIN transportadoras t ON t.id_transportadora = e.id_transportadora
     WHERE e.data_entrega_efetiva IS NOT null
 GROUP BY t.id_transportadora, t.nome;
 
