@@ -1,9 +1,3 @@
--- REESTRUTURAÇÃO DO BANCO PARA ANALYTICS AVANÇADO
-DROP TABLE IF EXISTS entregas;
-DROP TABLE IF EXISTS pedidos;
-DROP TABLE IF EXISTS clientes;
-DROP TABLE IF EXISTS transportes;
-
 CREATE TABLE clientes (
     id_clientes INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -37,7 +31,7 @@ CREATE TABLE entregas (
     data_entrega_efetiva DATE, -- Para cálculo de SLA e Prazo Médio
     prazo_prometido_dias INT,
     CONSTRAINT fk_entregas_pedidos FOREIGN KEY (id_pedidos) REFERENCES pedidos(id_pedidos),
-    CONSTRAINT fk_entregas_transportadoras FOREIGN KEY (id_transportadora) REFERENCES transportes(id_transportadora)
+    CONSTRAINT fk_entregas_transportadoras FOREIGN KEY (id_transportadora) REFERENCES transportadoras(id_transportadora)
 );
 
 -- DADOS DE TESTE (Massa de dados realista de E-commerce)
@@ -76,7 +70,7 @@ INSERT INTO entregas (id_pedidos, id_transportadora, status_entrega, valor_frete
 
 --Recita total e ticket medio
 select SUM(valor_total) AS receita_total,
-ROUND(AVG(valor_total),2) AS tickte_medio FROM pedidos
+ROUND(AVG(valor_total),2) AS ticket_medio FROM pedidos
 where status_pedido <> 'Cancelado';
 
 -- Clientes Ativos vs. Churn
@@ -109,12 +103,12 @@ GROUP BY c.id_clientes, c.nome
 ORDER BY receita_total_pedidos DESC;
 
 --Qual cliente tem o maior histórico de pedidos cancelados?
-SELECT c.nome, COUNT(p.id_pedidos) AS total_pedidos_Cncelados FROM clientes c
+SELECT c.nome, COUNT(p.id_pedidos) AS total_pedidos_Cancelados FROM clientes c
 JOIN pedidos p
 ON p.id_clientes = c.id_clientes
 WHERE status_pedido = 'Cancelado'
 GROUP BY c.id_clientes, c.nome
-ORDER BY total_pedidos_Cncelados DESC;
+ORDER BY total_pedidos_Cancelados DESC;
 
 --Liste os pedidos cujo valor seja maior do que a média de consumo do seu respectivo cliente.
 SELECT c.nome,p_externo.id_clientes, p_externo.id_pedidos, p_externo.valor_total FROM pedidos p_externo
@@ -138,7 +132,7 @@ WHERE p_ext.data_pedido = (
 SELECT id_clientes, 
     id_pedidos, 
     valor_total,
-    DENSE_RANK() OVER(PARTITION BY id_clientes ORDER BY valor_total desc ) AS rankig
+    DENSE_RANK() OVER(PARTITION BY id_clientes ORDER BY valor_total desc ) AS ranking
     FROM pedidos
 GROUP BY id_pedidos;
 
@@ -173,7 +167,7 @@ GROUP BY t.id_transportadora, t.nome;
 
 --Pergunta de Negócio: Unindo o menor custo de frete, menor taxa de falhas e o melhor cumprimento de prazos, qual parceiro lidera o ranking de eficiência?
 SELECT t.nome AS transportadora,
-    COUNT(e.id_entregas) AS total_de_entrgas,
+    COUNT(e.id_entregas) AS total_de_entregas,
     ROUND(AVG(e.valor_frete),2) AS media_vlr_frete,
     COUNT(CASE WHEN e.status_entrega =  'Falha' THEN 1 END) AS Total_de_falhas,
     ROUND(COUNT (CASE WHEN (e.data_entrega_efetiva - e.data_envio) <= e.prazo_prometido_dias THEN 1 END) * 100 / COUNT(e.id_entregas), 2) AS taxa_sla
@@ -205,4 +199,4 @@ SELECT
 FROM pedidos p
 JOIN clientes c ON c.id_clientes = p.id_clientes
 LEFT JOIN entregas e ON e.id_pedidos = p.id_pedidos
-LEFT JOIN transportes t ON t.id_transportadora = e.id_transportadora;
+LEFT JOIN transportadora t ON t.id_transportadora = e.id_transportadora;
