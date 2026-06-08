@@ -133,8 +133,7 @@ SELECT id_clientes,
     id_pedidos, 
     valor_total,
     DENSE_RANK() OVER(PARTITION BY id_clientes ORDER BY valor_total desc ) AS ranking
-    FROM pedidos
-GROUP BY id_pedidos;
+    FROM pedidos;
 
 
 --pedidos de cada cliente comparando diretamente o valor do pedido atual com o valor do pedido imediatamente anterior que ele fez.
@@ -175,7 +174,7 @@ FROM entregas e
     JOIN transportadoras t
     ON t.id_transportadora = e.id_transportadora
 GROUP BY t.id_transportadora, t.nome
-ORDER BY taxa_sla, media_vlr_frete ASC;
+ORDER BY taxa_sla DESC, media_vlr_frete ASC;
 
 --todas as principais métricas calculadas em uma única estrutura limpa e centralizada para o time de BI
 CREATE OR REPLACE VIEW v_analytics_ecommerce_master AS
