@@ -36,10 +36,10 @@ O projeto responde a dores reais de negócio divididas em blocos:
 1. **KPIs Clássicos de E-commerce:** Faturamento total, ticket médio, taxa de churn e volumetria de clientes recorrentes.
 2.  ![Receitaeticket](./Recita_total_e_ticket_medio.png)
 3. **Comportamento do Consumidor:** Identificação de perfis que mais compram, mais geram receita e clientes com maior taxa de cancelamento.
-4. * ![Crescimento](./Clientes_Ativos_vs._Churn.png)
-5. **Mergulho Técnico:** Aplicação prática de lógica correlacionada e funções de janela.
-6.   *  ![Logística ](./realtorio_entregas.png)
-7. **Logística:** Prazo médio de entrega por parceiro e ranking de eficiência de transportadoras com base em custo de frete e cumprimento de prazos.
-8. .   *  ![Logística ](./ranking.png)
+ * ![Crescimento](./Clientes_Ativos_vs._Churn.png)
+4. **Mergulho Técnico:** Aplicação prática de lógica correlacionada e funções de janela.
+   *  ![Logística ](./ranking.png)
+6. **Logística:** Prazo médio de entrega por parceiro e ranking de eficiência de transportadoras com base em custo de frete e cumprimento de prazos.
+ * ![Logística ](./realtorio_entregas.png)
 
 ---
