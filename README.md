@@ -3,7 +3,7 @@
 [![SQL](https://img.shields.io/badge/Language-SQL%20%2F%20PostgreSQL-blue.svg)](https://en.wikipedia.org/wiki/PostgreSQL)
 [![Database-Supabase](https://img.shields.io/badge/Database-Supabase%20%28Cloud%29-emerald.svg)](https://supabase.com/)
 
-Este projeto prático foi desenvolvido para simular o banco de dados de uma operação real de e-commerceu, utilizando PostgreSQL. O objetivo principal é extrair indicadores-chave de performance (KPIs) para tomada de decisão estratégica, servindo como uma base de dados otimizada e pronta para consumo em ferramentas de BI (como o Power BI).
+Este projeto prático foi desenvolvido para simular o banco de dados de uma operação real de e-commerce, utilizando PostgreSQL. O objetivo principal é extrair indicadores-chave de performance (KPIs) para tomada de decisão estratégica, servindo como uma base de dados otimizada e pronta para consumo em ferramentas de BI (como o Power BI).
 
 ---
 Modelo Relacional Atualizado
