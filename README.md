@@ -20,7 +20,7 @@ O banco de dados foi reestruturado para suportar análises temporais e de efici�
 
 Conceitos Técnicos Avançados Aplicados
 
-Neste ecossistema de análise de dados, apliquei recursos avançados de SQL utilizados por Engenheiros e Analistas de Dados Plenos/Sêniores:
+Nesta análise de dados, apliquei recursos avançados de SQL utilizados por Engenheiros e Analistas de Dados:
 * **Window Functions (`OVER`)**: Utilizadas para cálculos analíticos sem a necessidade de sumariar ou contrair as linhas. Aplicado com `DENSE_RANK()`, `SUM() OVER()` para faturamento acumulado no tempo e `LAG()` para comparação de registros atuais com os anteriores.
 * **Subqueries Correlacionadas**: Consultas internas que dependem do contexto da linha atual da consulta externa. Aplicadas para buscar o último pedido de cada cliente e comparar gastos individuais contra médias dinâmicas.
 * **Cálculo de Métricas de Negócio (Analytics)**:
@@ -36,14 +36,6 @@ O projeto responde a dores reais de negócio divididas em blocos:
 1. **KPIs Clássicos de E-commerce:** Faturamento total, ticket médio, taxa de churn e volumetria de clientes recorrentes.
 2. **Comportamento do Consumidor:** Identificação de perfis que mais compram, mais geram receita e clientes com maior taxa de cancelamento.
 3. **Mergulho Técnico:** Aplicação prática de lógica correlacionada e funções de janela.
-4. **Logística de Elite:** Prazo médio de entrega por parceiro e ranking de eficiência de transportadoras com base em custo de frete e cumprimento de prazos.
+4. **Logística:** Prazo médio de entrega por parceiro e ranking de eficiência de transportadoras com base em custo de frete e cumprimento de prazos.
 
 ---
-
- Como Executar e Conectar ao Power BI
-
-1. Crie um projeto gratuito no [Supabase](https://supabase.com/).
-2. Vá até o **SQL Editor** e execute o script contido no arquivo `analytics_avancado.sql`.
-3. No seu **Power BI Desktop**, selecione a opção de obter dados de um banco **PostgreSQL**.
-4. Insira os dados de *Host* fornecidos pelo Supabase.
-5. Em vez de importar as tabelas brutas, selecione a view `v_analytics_ecommerce_master` para carregar dados já tratados e modelados para os seus gráficos.
