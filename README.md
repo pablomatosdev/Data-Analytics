@@ -39,8 +39,8 @@ O projeto responde a dores reais de negócio divididas em blocos:
  * ![Crescimento](Imagens/Clientes_Ativos_vs._Churn.png)
 4. **Mergulho Técnico:** Aplicação prática de lógica correlacionada e funções de janela.
    *  ![Logística ](Imagens/ranking.png)
-6. **Logística:** Prazo médio de entrega por parceiro e ranking de eficiência de transportadoras com base em custo de frete e cumprimento de prazos.
- * ![Logística ](Imagens/realtorio_entregas.png)
-7.**Visualização de Dados no PowerBI:**
-  * ![PowerBI](Imagens/PowerBI_view.png)
+5. **Logística:** Prazo médio de entrega por parceiro e ranking de eficiência de transportadoras com base em custo de frete e cumprimento de prazos.
+ * ![Logística ](Imagens/realtorio_entregas.png) 
+6.**Visualização de Dados no PowerBI:**
+   * ![PowerBI](Imagens/PowerBI_view.png)
    
