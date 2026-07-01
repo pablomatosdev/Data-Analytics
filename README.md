@@ -1,6 +1,6 @@
 # 🛒 E-Commerce & Logistics SQL Analytics Project (PostgreSQL & Supabase)
 
-![Modelo Relacional](./modelo_relacional.png)
+![Modelo Relacional](.imagens/modelo_relacional.png)
 [![SQL](https://img.shields.io/badge/Language-SQL%20%2F%20PostgreSQL-blue.svg)](https://en.wikipedia.org/wiki/PostgreSQL)
 [![Database-Supabase](https://img.shields.io/badge/Database-Supabase%20%28Cloud%29-emerald.svg)](https://supabase.com/)
 
@@ -34,12 +34,12 @@ Nesta análise de dados, apliquei recursos avançados de SQL utilizados por Enge
 
 O projeto responde a dores reais de negócio divididas em blocos:
 1. **KPIs Clássicos de E-commerce:** Faturamento total, ticket médio, taxa de churn e volumetria de clientes recorrentes.
-2.  ![Receitaeticket](./Recita_total_e_ticket_medio.png)
+2.  ![Receitaeticket](.imagens/Recita_total_e_ticket_medio.png)
 3. **Comportamento do Consumidor:** Identificação de perfis que mais compram, mais geram receita e clientes com maior taxa de cancelamento.
- * ![Crescimento](./Clientes_Ativos_vs._Churn.png)
+ * ![Crescimento](.imagens/Clientes_Ativos_vs._Churn.png)
 4. **Mergulho Técnico:** Aplicação prática de lógica correlacionada e funções de janela.
-   *  ![Logística ](./ranking.png)
+   *  ![Logística ](.imagens/ranking.png)
 6. **Logística:** Prazo médio de entrega por parceiro e ranking de eficiência de transportadoras com base em custo de frete e cumprimento de prazos.
- * ![Logística ](./realtorio_entregas.png)
+ * ![Logística ](.imagens/realtorio_entregas.png)
 
 ---
