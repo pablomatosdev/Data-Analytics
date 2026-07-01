@@ -34,15 +34,14 @@ Nesta análise de dados, apliquei recursos avançados de SQL utilizados por Enge
 
 O projeto responde a dores reais de negócio divididas em blocos:
 1. **KPIs Clássicos de E-commerce:** Faturamento total, ticket médio, taxa de churn e volumetria de clientes recorrentes.
-3.  ![Receitaeticket](Imagens/Recita_total_e_ticket_medio.png)
-4. **Comportamento do Consumidor:** Identificação de perfis que mais compram, mais geram receita e clientes com maior taxa de cancelamento.
+  ![Receitaeticket](Imagens/Recita_total_e_ticket_medio.png)
+2. **Comportamento do Consumidor:** Identificação de perfis que mais compram, mais geram receita e clientes com maior taxa de cancelamento.
  * ![Crescimento](Imagens/Clientes_Ativos_vs._Churn.png)
-4. **Mergulho Técnico:** Aplicação prática de lógica correlacionada e funções de janela.
+3. **Mergulho Técnico:** Aplicação prática de lógica correlacionada e funções de janela.
    *  ![Logística ](Imagens/ranking.png)
-5. **Logística:** Prazo médio de entrega por parceiro e ranking de eficiência de transportadoras com base em custo de frete e cumprimento de prazos.
+4. **Logística:** Prazo médio de entrega por parceiro e ranking de eficiência de transportadoras com base em custo de frete e cumprimento de prazos.
  * ![Logística ](Imagens/realtorio_entregas.png)
- 
-6.**Visualização de Dados no PowerBI:**
+5.**Visualização de Dados no PowerBI:**
    
    ![PowerBI](Imagens/PowerBI_view.png)
    
