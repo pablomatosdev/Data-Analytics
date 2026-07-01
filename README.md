@@ -34,7 +34,7 @@ Nesta análise de dados, apliquei recursos avançados de SQL utilizados por Enge
 
 O projeto responde a dores reais de negócio divididas em blocos:
 1. **KPIs Clássicos de E-commerce:** Faturamento total, ticket médio, taxa de churn e volumetria de clientes recorrentes.
-  ![Receitaeticket](Imagens/Recita_total_e_ticket_medio.png)
+ * ![Receitaeticket](Imagens/Recita_total_e_ticket_medio.png)
 2. **Comportamento do Consumidor:** Identificação de perfis que mais compram, mais geram receita e clientes com maior taxa de cancelamento.
  * ![Crescimento](Imagens/Clientes_Ativos_vs._Churn.png)
 3. **Mergulho Técnico:** Aplicação prática de lógica correlacionada e funções de janela.
