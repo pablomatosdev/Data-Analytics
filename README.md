@@ -1,6 +1,6 @@
 # 🛒 E-Commerce & Logistics SQL Analytics Project (PostgreSQL & Supabase)
 
-![Modelo Relacional](./Imagens
+![Modelo Relacional](Imagens
 /modelo_relacional.png)
 [![SQL](https://img.shields.io/badge/Language-SQL%20%2F%20PostgreSQL-blue.svg)](https://en.wikipedia.org/wiki/PostgreSQL)
 [![Database-Supabase](https://img.shields.io/badge/Database-Supabase%20%28Cloud%29-emerald.svg)](https://supabase.com/)
