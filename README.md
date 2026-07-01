@@ -43,5 +43,6 @@ O projeto responde a dores reais de negócio divididas em blocos:
  * ![Logística ](Imagens/realtorio_entregas.png)
  * 
 6.**Visualização de Dados no PowerBI:**
+   
    ![PowerBI](Imagens/PowerBI_view.png)
    
